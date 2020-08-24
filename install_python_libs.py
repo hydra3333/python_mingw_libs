@@ -15,6 +15,7 @@
 # #################################################################################################################
 
 import sys,os,urllib
+from urllib.request import urlretrieve # python3
 from distutils.version import LooseVersion
 
 _DEBUG = False
@@ -47,7 +48,7 @@ PACKAGE_STUFF = {
 
 def run_cmd(cmd):
 	if _DEBUG:
-		print("\n--Running command in '%s': '%s'\n--" % (os.getcwd(),cmd))
+		print("\n--Running command in '%s': \n%s" % (os.getcwd(),cmd))
 	if os.system(cmd) != 0:
 		print("Failed to execute: " + str(cmd))
 		exit(1)
@@ -108,7 +109,8 @@ else:
 		
 		url,filename = 'https://www.python.org/ftp/python/{0}/python-{2}-embed-{1}.zip'.format(ver,arch,rc_ver), 'python-{0}-embed-{1}.zip'.format(rc_ver,arch)
 		print("Downloading: " + url)
-		urllib.urlretrieve(url,filename)
+		#urllib.urlretrieve(url,filename) # python2
+		urlretrieve(url,filename) # python3
 		print("Done")
 		
 		dllname = PACKAGE_STUFF["dllzname"].replace("%%SHORT%%",ver_short)
@@ -163,7 +165,8 @@ else:
 		url,filename = 'https://www.python.org/ftp/python/{0}/Python-{1}.tgz'.format(ver,rc_ver), 'Python-{0}.tgz'.format(rc_ver)
 				
 		print("Downloading: " + url)
-		urllib.urlretrieve(url,filename)
+		#urllib.urlretrieve(url,filename) # python2
+		urlretrieve(url,filename) # python3
 		print("Done")
 		print("Extracting headers")
 		run_cmd("mkdir include")
