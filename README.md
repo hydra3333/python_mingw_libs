@@ -7,6 +7,7 @@ Python source: https://www.python.org/downloads/source/
 
 ### Supports:
  - Python 3.8.x Win64 and 32 variants (Only tested 64bit)
+ - Python 3.9.x Win64 and 32 variants (Only tested 64bit)
 
 ### Requires: 
  - gendef (part of MinGW)
