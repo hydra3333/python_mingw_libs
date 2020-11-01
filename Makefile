@@ -12,7 +12,7 @@
 # #################################################################################################################
 
 PYTHON_VERSION = 3.8.6 # for vapoursynth R52
-#PYTHON_VERSION = 3.9.0
+#PYTHON_VERSION = 3.9.0 # for vapoursynth R53
 #amd64, win32
 ARCH = amd64
 ifndef PREFIX
