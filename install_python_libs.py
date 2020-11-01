@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 
 # #################################################################################################################
 # Copyright (C) 2017 DeadSix27 (https://github.com/DeadSix27/python_mingw_libs)
@@ -20,7 +20,7 @@ from distutils.version import LooseVersion
 
 _DEBUG = False
 
-SUPPORTED_VERSIONS = ['3.6.4','3.6.5','3.6.6','3.6.7','3.7.1','3.7.2','3.7.3','3.7.4','3.7.5','3.8.2','3.8.5','3.8.6','3.8.7','3.8.9','3.9.0']
+SUPPORTED_VERSIONS = ['3.6.4','3.6.5','3.6.6','3.6.7','3.7.1','3.7.2','3.7.3','3.7.4','3.7.5','3.8.2','3.8.5','3.8.6','3.8.7','3.8.9']
 RC_VERS = { '3.6.7' : '3.6.7rc2' }
 
 PACKAGE_STUFF = {
@@ -62,7 +62,6 @@ def is_tool(name):
 
 def exitHelp():
 	print("install_python_libs.py install/uninstall <arch> <version> <install_prefix> - e.g install_python_libs.py amd64 3.8.6 /test/cross_compilers/....../")
-	#print("install_python_libs.py install/uninstall <arch> <version> <install_prefix> - e.g install_python_libs.py amd64 3.9.0 /test/cross_compilers/....../")
 	exit(1)
 def exitVersions():
 	print("Only these versions are supported: " + " ".join(SUPPORTED_VERSIONS))
